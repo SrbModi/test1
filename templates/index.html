@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<link href="/static/css/main.css" rel="stylesheet" type="text/css" >
+
+<script>$(document).ready(function() {
+  $('#Carousel').carousel({
+  interval: false
+  })
+  });
+  $(document).ready(function() {
+  $('#Carousel1').carousel({
+  interval: false
+  })
+  });
+</script>
+</head>
+
+<!-- body starts -->
+<body>
+
+<!-- Navigation Bar starts -->
+
+<div class="page-header">
+  <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-3 col-sm-12">
+      
+       <a href=#>qwerty</a>
+      
+     </div>
+     <div class="col-md-7 col-sm-10">
+      <nav class="navbar navbar-default ">
+      <div id="navbar" class="container-fluid nav-container">
+       <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li  ><a href="#">HOME</a></li>
+		
+
+        <li ><a href="#">PRODUCTS</a></li>
+        
+        <li ><a href="http://127.0.0.1:8000/blogs/">BLOG</a></li>
+        <li ><a href="http://127.0.0.1:8000/faqs/">FAQS</a></li>
+        <li ><a href="http://127.0.0.1:8000/login/">{{status}}</a></li>  
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+		   <li><a href="contact_cust.html"> Customer</a></li>
+		   <li><a href="contact_dealer.html">Dealer</a></li>
+		   <li><a href="contact_seller.html"> Seller</a></li>
+		  </ul>
+		 
+		
+		</li>
+      </ul>
+      </div>
+      
+     </div>
+      </nav>
+     </div> 
+     <div class="col-md-2 col-sm-2">
+       <ul class="nav navbar-nav ">
+        <li><a href="#"><span class="glyphicon glyphicon-user" onclick="document.getElementById('id01').style.display='block'"></span> </a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+      </ul>
+     </div>
+   </div> 
+ </div>
+</div>
+
+<!-- Navigation Bar Ends -->
+
+
+<!-- Images Slider Automatic -->
+
+<div class=" no-padding col-md-12 col-sm-12">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+    <!-- Indicators -->
+  <!--   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      
+    </ol> -->
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" style="padding:0;"role="listbox">
+
+    <!-- wrap start -->
+      {{slider|safe}}
+    <!--   <div class="item active">
+        
+        <img src="/static/img/Banner2.jpg"  >
+        
+      </div>
+
+      <div class="item">
+        <img src="/static/img/Banner2.jpg"  >
+        
+      </div>
+    
+      <div class="item">
+        <img src="/static/img/Banner2.jpg"  >
+        
+      </div> -->
+      <!-- wrap end -->
+
+      
+  
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" style="padding:0;" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" style="padding:0;" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- Image slider automatic End -->
+
+<!-- Static Images -->
+
+<div class="container" >
+ <div class="row " >
+   <section>
+   <div class="col-xs-4 col-sm-4 col-md-4 text-center about"><img class="image-responsive"src="/static/img/s4.jpg" ></div>
+   <div class="col-xs-4 col-sm-4 col-md-4 text-center about"><img class="image-responsive"src="/static/img/s4.jpg" ></div>
+   <div class="col-xs-4 col-sm-4 col-md-4 text-center about"><img class="image-responsive"src="/static/img/s4.jpg" ></div>
+   </section>
+ </div>
+</div>
+
+<!-- static images end -->
+
+
+<!-- Products slider 1 start -->
+
+
+<div id="product" class="container-fluid ">
+  
+  <div class="span8">
+    
+    
+    
+   
+     
+    <div id="Carousel" class="carousel slide">
+     
+    
+     
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        
+
+      <!-- product row 1 -->
+
+<!--     <div class="item active">
+        
+        <div class="row-fluid">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-1"></div>
+        </div><!--/row-fluid-->
+    <!-- </div> --><!--/item-->
+     
+
+
+
+
+
+<!-- 
+
+    <div class="item">
+        <div class="row-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2">
+              <a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+              <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+            </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-1"></div>
+        </div> --><!--/row-fluid-->
+    <!-- </div> --><!--/item-->
+     
+    <!-- <div class="item">
+        <div class="row-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-1"></div>
+        </div> --><!--/row-fluid-->
+    <!-- </div> --><!--/item--> -->
+     
+    {{pickel|safe}}
+
+    </div><!--/carousel-inner-->
+     
+    <a class="left carousel-control" href="#Carousel" data-slide="prev"> 
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+    <a class="right carousel-control" href="#Carousel" data-slide="next"> 
+  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    </div><!--/Carousel-->
+     
+    
+  </div>
+</div>
+
+
+<!-- Product Slider 1 ends -->
+
+
+<!-- Product Slider 2 starts -->
+
+<div id="product"class="container-fluid">
+  
+  <div class="span8">
+    
+    
+    
+   
+     
+    <div id="Carousel1" class="carousel slide">
+     
+    
+     
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+        
+    <!-- <div class="item active">
+        <div class="row-fluid">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+            </div>
+		  </div>
+          <div class="col-xs-1"></div>
+        </div> --><!--/row-fluid-->
+    <!-- </div> --><!--/item-->
+     
+    <!-- <div class="item">
+        <div class="row-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2">
+              <a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+              <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+            </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-1"></div>
+        </div> --><!--/row-fluid-->
+    <!-- </div> --><!--/item-->
+     
+    <!-- <div class="item">
+        <div class="row-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+                   
+
+              </div>
+			</div>
+            <div class="col-xs-1"></div>
+        </div> --><!--/row-fluid-->
+    <!-- </div> --><!--/item-->
+     
+
+    {{amla|safe}}
+
+
+    </div><!--/carousel-inner-->
+     
+    <a class="left carousel-control" href="#Carousel1" data-slide="prev"> 
+  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+    <a class="right carousel-control" href="#Carousel1" data-slide="next"> 
+  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    </div><!--/Carousel-->
+     
+    
+  </div>
+</div>
+
+
+<!-- Product slider 2 ends -->
+
+
+<!-- Static Image -->
+
+
+<div class="container-fluid" style="width:100%;padding:0;margin:0;">
+  <div class="col-xs-12" style="width:100%;padding:0;margin:0;">
+     <a href="#" ><img src="/static/img/Banner.jpg" style="width:100%;padding:0;margin:0;"></a>
+  </div>
+</div>
+
+<!-- Statc Image ends -->
+
+<!-- Footer starts -->
+
+
+  <div class="container-fluid footer">
+
+     <div class="row">
+	 
+      <div class="col-md-3" >
+       <h3>About</h3>
+       <p> One of the Pioneers in the field of ayurveda medicine and in house product</p>
+      </div>
+      <div class="col-md-3">
+        <h3>Information</h3>
+        <ul >
+         <li style="list-style:none"><a href=# style="text-decoration:none;color:#ffffff;"><span>FAQS</span></a></li>
+         <li style="list-style:none" ><a href=# style="text-decoration:none;color:#ffffff;"><span>BLOGS</span></a></li>
+        <ul>
+      </div>
+      <div class="col-md-3">
+        <h3>Contact Us</h3>
+        <span>Elex gallery ,Floor no.-2,Elex Department,NIT Raipur,Chhattisgarh</span>     
+      </div>
+      <div class="col-md-3"></div>
+	  
+    
+  </div>
+  </div>
+  
+  <!-- footer ends -->
+  
+ </body>
+ </html>

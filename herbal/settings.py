@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'adminpanel',
+    'login',
+    'orders',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -55,7 +58,7 @@ ROOT_URLCONF = 'herbal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,4 +121,35 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+# LOGIN_URL = '/login/'
+
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static"),
+]
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_cdn ")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"media_cdn")
+
+
+
+####### Pay yu payment integration information###################
+
+
+PAYU_INFO = {
+              'merchant_key': "gtKFFx",
+
+             'merchant_salt': "eCwWELxi",
+             # for production environment use 'https://secure.payu.in/_payment'
+             'payment_url': 'https://test.payu.in/_payment',
+             'surl':'http://www.google.com/',
+             'furl':'http://www.fb.com/',
+             'curl':'http://www.geeksforgeeks.com/',
+            }
+
+
+###################End payment info ###############################
+

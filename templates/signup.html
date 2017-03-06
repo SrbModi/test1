@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<link href="/static/css/main.css" rel="stylesheet" type="text/css" >
+
+</head>
+<body>
+<div class="page-header">
+  <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-3 col-sm-12">
+      
+       <a href=#>qwerty</a>
+      
+     </div>
+     <div class="col-md-7 col-sm-10">
+      <nav class="navbar navbar-default ">
+      <div id="navbar" class="container-fluid nav-container">
+       <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li  ><a href="http://127.0.0.1:8000/">HOME</a></li>
+		    <li ><a href="#">PRODUCTS</a></li>
+        <li ><a href="http://127.0.0.1:8000/blogs/">BLOG</a></li>
+        <li ><a href="http://127.0.0.1:8000/faqs/">FAQS</a></li> 
+         
+      </ul>
+      </div>
+      
+     </div>
+      </nav>
+     </div> 
+     <div class="col-md-2 col-sm-2">
+       <ul class="nav navbar-nav ">
+        <li><a href="#"><span class="glyphicon glyphicon-user" onclick="document.getElementById('id01').style.display='block'"></span> </a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+      </ul>
+     </div>
+   </div> 
+ </div>
+</div>
+<div class="container" style="margin-bottom:5%;">
+ <div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+     <h3 style="border-bottom:1px solid;padding:5%;margin:5%;">Register</h3>
+	 <form action="http://127.0.0.1:8000/signup/" method="POST">
+	   <div class="form-group">
+	    <label>Name</label><br>
+		<input type="text" class="form-control" required name="username">
+	   </div>
+	   <div class="form-group">
+	    <label>Address</label><br>
+		<input type="text" class="form-control" required name="address">
+	   </div>
+	   <div class="form-group">
+	    <label>Contact</label><br>
+		<input type="text" class="form-control" required name="contact">
+	   </div>
+	   <div class="form-group">
+	     <label>Email</label><br>
+	     <input type="email" class="form-control" required name="email">
+	   </div>
+	   <div class="form-group">
+	     <label>Password</label><br>
+	     <input type="password" class="form-control" required name="password">
+	   </div>
+	   <button type="submit" class="btn btn-default" >Register</button>
+	   
+	 </form>
+   </div>
+ </div>
+</div>
+<div class="container-fluid footer">
+
+     <div class="row">
+	 
+      <div class="col-md-3" >
+       <h3>About</h3>
+       <p> One of the Pioneers in the field of ayurveda medicine and in house product</p>
+      </div>
+      <div class="col-md-3">
+        <h3>Information</h3>
+        <ul >
+         <li style="list-style:none"><a href=# style="text-decoration:none;color:#ffffff;"><span>FAQS</span></a></li>
+         <li style="list-style:none" ><a href=# style="text-decoration:none;color:#ffffff;"><span>BLOGS</span></a></li>
+        <ul>
+      </div>
+      <div class="col-md-3">
+        <h3>Contact Us</h3>
+        <span>Elex gallery ,Floor no.-2,Elex Department,NIT Raipur,Chhattisgarh</span>     
+      </div>
+      <div class="col-md-3"></div>
+	  
+    
+     </div>
+</div>
+
+ </body>
+ </html>

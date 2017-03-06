@@ -16,7 +16,60 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
+from login.views import *
+from adminpanel.views import home,blog,faqs,prod,sub_query,dealer_cont,customer_cont,seller_cont,sub_query,welcome
+from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func
+from django.contrib.admin import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$',home),
+    url(r'^signin/$',sign_in),
+    url(r'^login/$',log),
+    url(r'^signup/$',sign_up),
+    url(r'^product/(?P<id>\d+)/',prod),
+    url(r'^addcart/(?P<id>\d+)/',addtocart),
+    url(r'^updatecart/change/(?P<id>\d+)/',updatecart),
+    url(r'^cart/',cartlist),
+    url(r'^blogs/',blog),
+    url(r'^faqs/',faqs),
+    url(r'^dealer_contact/',dealer_cont),
+    url(r'^customer_contact/',customer_cont),
+    url(r'^seller_contact/',seller_cont),
+    url(r'^submit_query/',sub_query),
+    url(r'^checkout/',func),
+    url(r'^topayment/',topayment),
+    # url(r'^test/',test),
+    url(r'^welcome/',welcome),
+    url(r'^buy/',func),
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+admin.site.site_header = "XYZ HERBAL PRODUCTS"
+# AdminSite.site_title = "check it"
+# admin.site.site_url = "http://www.google.com/" - to change the link to "view site" option
+
+
+if settings.DEBUG :
+    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+    
