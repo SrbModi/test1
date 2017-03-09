@@ -46,18 +46,34 @@ def home(request):
 		str1 += '<div class="col-xs-2"><a href="#x" class="thumbnail"><img src="'
 		str1 += str(o.image.url)
 		str1 += '" alt="Image" style="max-width:100%;"></a>'
-		str1 += '<div><div class="text-center"><a href="'
+		str1 += '<div><div class="text-center"><a class = "text-uppercase" style="text-decoration:none; color:black; font-size:18px;" href="'
 		str1 += url + 'product/' + str(o.prod_id) + '/'
 		str1 += '">'
 		str1 += str(o.prod_name)
-		str1 +='</a><p>'
+		str1 +='</a><br><br><p class="text-uppercase" style="font-size:12px;">'
 		str1 += str(o.short_desc)
-		str1 += '</p></div><div class="text-center">'
-		str1 += str(o.price)
+		str1 += '</p></div><div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;padding-top:5%;">'
+		str1 += '<p>'
+		if o.offer == 0:
+			str1 += '<span style="color:black;margin:2%;font-size:19px">'
+			str1 += '₹' + str(o.price)
+			str1 += '</span><br>'
+		else:
+			str1 += '<span style="text-decoration:line-through; color:grey;margin:2%;font-size:19px">'
+			price = o.price
+			str1 += '₹' + str(price)
+			str1 += '</span><span style="color:red;margin-left:0.1%;margin-right:4%;font-size:14px">'
+			offer = o.offer
+			str1 += str(offer) + '%' + ' off'
+			str1 += '</span><br><span style="font-weight:bold; font-size:19px;margin:2%;">'
+			rate = float(price-(price*offer/100))
+			rate = round(rate,2)
+			str1 += '₹' + str(rate)
+			str1 += '</span></p>'
 		str1 += '</div></div></div>'
 		if count%5 == 0:
 			str1 += '<div class="col-xs-1"></div></div></div>'
-			str1 += '<div class="item "><div class="row-fluid"><div class="col-xs-1"></div>' #statement P
+			str1 += '<div class="item "><div class="row-fluid"><div class="col-xs-1"></div>'
 
 	if count%5 == 0:
 		str1 = str1[:-70] #removing 70 characters from the end of str1 (from statement P)
@@ -75,19 +91,35 @@ def home(request):
 		str1 += '<div class="col-xs-2"><a href="#x" class="thumbnail"><img src="'
 		str1 += str(o.image.url)
 		str1 += '" alt="Image" style="max-width:100%;"></a>'
-		str1 += '<div><div class="text-center"><a href="'
+		str1 += '<div><div class="text-center"><a class = "text-uppercase" style="text-decoration:none; color:black; font-size:18px;" href="'
 		str1 += url + 'product/' + str(o.prod_id) + '/'
 		str1 += '">'
 		str1 += str(o.prod_name)
-		str1 +='</a><p>'
+		str1 +='</a><br><br><p class="text-uppercase" style="font-size:12px;">'
 		str1 += str(o.short_desc)
-		str1 += '</p></div><div class="text-center">'
-		str1 += str(o.price)
+		str1 += '</p></div><div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;padding-top:5%;">'
+		str1 += '<p>'
+		if o.offer == 0:
+			str1 += '<span style="color:black;margin:2%;font-size:19px">'
+			str1 += '₹' + str(o.price)
+			str1 += '</span>'
+		else:
+			str1 += '<span style="text-decoration:line-through; color:grey;margin:2%;font-size:19px">'
+			price = o.price
+			str1 += '₹' + str(price)
+			str1 += '</span><span style="color:red;margin-left:0.1%;margin-right:4%;font-size:14px">'
+			offer = o.offer
+			str1 += str(offer) + '%' +' off'
+			str1 += '</span><br><span style="font-weight:bold; font-size:19px;margin:2%;">'
+			rate = float(price-(price*offer/100))
+			rate = round(rate,2)
+			str1 += '₹' + str(rate)
+			str1 += '</span></p>'
 		str1 += '</div></div></div>'
 		if count%5 == 0:
 			str1 += '<div class="col-xs-1"></div></div></div>'
-			str1 += '<div class="item "><div class="row-fluid"><div class="col-xs-1"></div>' #statement P
-
+			str1 += '<div class="item "><div class="row-fluid"><div class="col-xs-1"></div>'
+		
 	if count%5 == 0:
 		str1 = str1[:-70] #removing 70 characters from the end of str1 (from statement P)
 	else:
@@ -131,7 +163,7 @@ def blog(request):
 	str1 = ' ' 
 	x = 1
 	for o in blogs.objects.all():
-		str1 += '<div class="panel panel-default"><div class="panel-heading"><img class="panel-title" src="'
+		str1 += '<div class="panel panel-default"><div class="panel-heading"><img class="blog-img panel-title" src="'
 		str1 += str(o.image.url)
 		str1 += '"></img><h3>'
 		str1 += str(o.topic)
@@ -141,7 +173,7 @@ def blog(request):
 		str1 += '<button type="button" class="accordion-toggle collapsed btn btn-success btn-lg"data-toggle='
 		str1 += '"collapse" data-parent="#accordion" href="#collapse'
 		str1 += str(x)
-		str1 += '"style="margin-left:70%;">Read</button></h5>'
+		str1 += '"style="margin-left:80%;">Read</button></h5>'
 		str1 += '</div><div id="collapse'
 		str1 += str(x)
 		str1 += '" class="panel-collapse collapse "><div class="panel-body">'
@@ -165,9 +197,19 @@ def prod(request,id):
 	context["prod_name"] = o.prod_name
 	context["image"] = o.image.url
 	print(o.image.url)
-	context["price"] = o.price
-	context["offer"] = o.offer
-	context["avail"] = o.avail
+	price = o.price
+	offer = o.offer
+	context["price"] = price
+	context["offer"] = str(offer)
+	amount = float(price - (price*offer/100))
+	amount = round(amount,2)
+	context["amount"] = amount
+	
+	if o.avail is True:
+		context["avail"] = "available"
+	else:
+		context["avail"] = "not available"
+
 	context["desc"] = o.desc
 	context["nutrient_1"] = o.nut_1
 	context["nutrient_2"] = o.nut_2

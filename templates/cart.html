@@ -4,19 +4,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- jQuery library -->
+<!-- <link rel="stylesheet" href="static/css/bootstrap.min.css">
+ --><!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 <link href="/static/css/main.css" rel="stylesheet" type="text/css" >
 </head>
 <body>
-<div class="page-header">
+<!-- Navigation Bar starts -->
 
+<div class="page-header">
   <div class="container-fluid">
     <div class="row">
      <div class="col-md-3 col-sm-12">
@@ -35,24 +36,25 @@
       </button>
       
        </div>
-       <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li  ><a href="#">HOME</a></li>
-		
+       <div class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav" id="myNavbar">
+        <li  ><a href="http://127.0.0.1:8000/">HOME</a></li>
+    
 
-        <li ><a href="#">PRODUCTS</a></li>
-        <li ><a href="#">EVENTS</a></li> 
-        <li ><a href="#">BLOG</a></li>
-        <li ><a href="faq.html">FAQS</a></li> 
-		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact <span class="caret"></span></a>
+        <li ><a href="http://127.0.0.1:8000/aboutus/">ABOUT</a></li>
+        
+        <li ><a href="http://127.0.0.1:8000/blogs/">BLOG</a></li>
+        <li ><a href="http://127.0.0.1:8000/faqs/">FAQS</a></li>
+         
+    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CONTACT <span class="caret"></span></a>
           <ul class="dropdown-menu">
-		   <li><a href="contact_cust.html"> Customer</a></li>
-		   <li><a href="contact_dealer.html">Dealer</a></li>
-		   <li><a href="contact_seller.html"> Seller</a></li>
-		  </ul>
-		 
-		
-		</li>
+       <li><a href="contact_cust.html"> Customer</a></li>
+       <li><a href="contact_dealer.html">Dealer</a></li>
+       <li><a href="contact_seller.html"> Seller</a></li>
+      </ul>
+     <li ><a href="http://127.0.0.1:8000/login/">{{status}}</a></li> 
+    
+    </li>
       </ul>
       </div>
       
@@ -61,13 +63,13 @@
      </div> 
      <div class="col-md-2 col-sm-2">
        <ul class="nav navbar-nav ">
-        <li><a href="#"><span class="glyphicon glyphicon-user" onclick="document.getElementById('id01').style.display='block'"></span> </a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
       </ul>
      </div>
    </div> 
  </div>
 </div>
+
 
 <div class="container">
   <h2> Cart</h2>

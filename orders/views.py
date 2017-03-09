@@ -13,9 +13,9 @@ from hashlib import sha512
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 from uuid import uuid4
-
 from uuid import UUID
 import uuid
+from instamojo_wrapper import Instamojo
 # from .util import generate_hash
 
 # Create your views here.
@@ -234,143 +234,6 @@ def topayment(request):
 ###########################-----action on proceed to checkout-----###########################
 
 
-# def buy_order(request):
-#     """ funtion for save all orders and genarate order id"""
-#     items = None
-#     orderitem = None
-#     extra = False
-#     if request.user.is_authenticated() and not request.user.is_staff:
-#         user = request.user.username
-#         # try:
-#         #     cart = Cart.objects.get(buyer=request.user)
-#         # except ObjectDoesNotExist:
-#         #     extra = "You dont have any item in your cart"
-#         #     variables = RequestContext(request, {'extra': extra})
-#         #     return render_to_response('home.html', variables)
-#             # total_amount = OrderItem.objects.filter(buyer=request.user)
-#     item_list = []
-#     # rg = request.POST.get
-#     # if cart:
-#     # if request.POST:
-#     # rg('shippingnme')and rg('shippingaddress') and rg('shippingemail') and                                                   rg('shippingpostel') and rg('shippingcity') and rg('shippingcountry') and                                                 rg('shippingcountry') rg('shippingphone'):
-#     # try:
-#     """store all products to myorder model and genarate order id for the order"""
-#     # myorder = MyOrder(buyer=user)
-#     # billing User
-#     # myorder.buyer = user
-#     # myorder of Billing  Address
-#     # myorder.billing_name = request.POST.get('billingname')
-#     # myorder.billing_street_address = request.POST.get(
-#     #     'billingaddress')
-#     # myorder.billing_pincode = request.POST.get('billingpostel')
-#     # myorder.billing_city = request.POST.get('billingcity')
-#     # myorder.billing_country = request.POST.get('billingcountry')
-#     # myorder.billing_state = request.POST.get('billingstate')
-#     # myorder.billing_mobile = request.POST.get('billingphone')
-#     # myorder.billing_email = request.POST.get('billingemail')
-
-#     # myorder of shipping Address
-#     # myorder.shipping_pincode = request.POST.get('shippingpostel')
-#     # myorder.shipping_name = request.POST.get('shippingnme')
-#     # myorder.shipping_street_address = request.POST.get(
-#     #     'shippingaddress')
-#     # myorder.shipping_city = request.POST.get('shippingcity')
-#     # myorder.shipping_state = request.POST.get('shippingstate')
-#     # myorder.shipping_mobile = request.POST.get('shippingphone')
-#     # myorder.shipping_country = request.POST.get('shippingcountry')
-#     # myorder.shipping_email = request.POST.get('shippingemail')
-#     # if request.POST.get('paymentmethod'):
-#     #     myorder.payment_method = request.POST.get('paymentmethod')
-#     # else:
-#     #     myorder.payment_method = 'ON'
-#     # myorder.comment =  request.POST.get('prodcutmessage')
-
-#     # print ("my messages ")
-#     # print (myorder.comment)
-
-#   # payment_method
-#   # comment
-#     # myorder.txnid = str(uuid.uuid1().int >> 64)
-#     txnid = str(uuid.uuid1().int >> 64)
-#     # myorder.save()
-#     """genarate an order id, the below loop will add all ordered product to the                                               order"""
-
-#     # for order in cart.items.all():
-#     #     orderitem = OrderItem()
-#     #     orderitem.buyer = order.buyer
-#     #     orderitem.product_id = order.product.id
-#     #     orderitem.product_title = order.product.name
-#     #     orderitem.weight = order.product.weight
-#     #     orderitem.product_price = order.product.gross_pay()[0]
-#     #     orderitem.total_amount = order.total
-#     #     orderitem.quantity = order.quantity
-#     #     orderitem.save()
-#     #     myorder.items.add(orderitem)
-#     # total_details = total_price_fu(myorder)
-
-#     """ After adding products to order assigning a
-#     transaction amount and shipping charge to the order"""
-#     # myorder = MyOrder.objects.get(pk=myorder.txnid)
-
-#     # myorder.amount = total_details['grand_total']
-#     amount = float(100,2)
-#     # myorder.shipping_rate = total_details['shipping_rate']
-#     name = 'sourabh'
-#     product_title = 'amla01'
-#     email = 'sourabh.modi14@gmail.com'
-
-#     """Assigning all values for hash funtion for payu"""
-
-#     cleaned_data = {'key': settings.PAYU_INFO['merchant_key'], 'txnid': txnid,'amount': amount, 'productinfo':product_title,'firstname': name, 'email':email, 'udf1': ' ', 'udf2': '', 'udf3': '', 'udf4': '', 'udf5': '', 'udf6': '','udf7': '',  'udf8': '', 'udf9': '', 'udf10': ''}
-
-#     """ the generate_hash funtion is use for genarating hash
-#      value from cleaned_data"""
-#     hash_o = generate_hash(cleaned_data)
-#     # myorder.hash =hash_o
-#     # myorder.save()
-
-    
-#     data = """<html>
-# 	                      <head><title>Redirecting...</title></head>
-# 	                      <body>
-# 	                      <form action='%s' method='post' name="payu">
-# 	                          <input type="hidden" name="firstname" value="%s" />
-# 	                          <input type="hidden" name="surl" value="%s" />
-# 	                          <input type="hidden" name="phone" value="%s" />
-# 	                          <input type="hidden" name="key" value="%s" />
-# 	                          <input type="hidden" name="hash" value =
-# 	                          "%s" />
-# 	                          <input type="hidden" name="curl" value="%s" />
-# 	                          <input type="hidden" name="furl" value="%s" />
-# 	                          <input type="hidden" name="txnid" value="%s" />
-# 	                          <input type="hidden" name="productinfo" value="%s" />
-# 	                          <input type="hidden" name="amount" value="%s" />
-# 	                          <input type="hidden" name="email" value="%s" />
-# 	                          <input type="hidden" value="submit">
-# 	                      </form>
-# 	                      </body>
-# 	                      <script language='javascript'>
-# 	                      window.onload = function(){
-# 	                       document.forms['payu'].submit()
-# 	                      }
-# 	                      </script>
-# 	                  </html>
-#     """ % (settings.PAYU_INFO['payment_url'],
-#     	name, 
-#     	settings.PAYU_INFO['surl'],v
-#     	9039189251,
-#     	settings.PAYU_INFO['merchant_key'],
-#     	hash_o,settings.PAYU_INFO['curl'],
-#     	settings.PAYU_INFO['furl'],
-#     	txnid,
-#     	product_title,
-#     	amount,
-#     	email
-#     	)
-	
-# 	# data_str = str(data)
-# 	return HttpResponse("<h1>Hello</h1>")
-
 def func(request):
 	context = {}
 	username = request.user.username
@@ -473,3 +336,38 @@ def verify_hash(data, SALT):
  #    	)
 
 	# return HttpResponse("hello")
+
+
+# @csrf_exempt
+# def insta(request):
+# 	context = {}
+# 	if request.method == "POST" :
+# 		print("1")
+# 		txnid = str(uuid.uuid1().int >> 64)
+# 		context["id"] = txnid
+# 		context["purpose"] = "for medifudo.com"
+# 		context["redirect_url"] = "http://127.0.0.1:8000/"
+# 		context["webhook"] = "http://127.0.0.1:8000/blogs/"
+# 		context["send_email"] = False
+# 		context["send_sms"] = False
+# 		return HttpResponse("Done")
+# 	else:
+# 		print("nothing posted")
+# 		return render(request,"checkout 1.html",context)
+
+
+@csrf_exempt
+def insta(request):
+	api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://test.instamojo.com/api/1.1/');
+	response = api.payment_request_create(
+		amount='3499',
+    	purpose='FIFA 16',
+    	send_email=True,
+    	email="sourabh.modi14@gmail.com",
+    	redirect_url="http://127.0.0.1:8000/"
+    	)
+	# print the long URL of the payment request.
+	print (response['payment_request']['longurl'])
+	# print the unique ID(or payment request ID)
+	print (response['payment_request']['id'])
+	return HttpResponse("Check the terminal")

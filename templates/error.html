@@ -13,6 +13,18 @@
 
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 <link href="/static/css/main.css" rel="stylesheet" type="text/css" >
+
+<script>$(document).ready(function() {
+  $('#Carousel').carousel({
+  interval: false
+  })
+  });
+  $(document).ready(function() {
+  $('#Carousel1').carousel({
+  interval: false
+  })
+  });
+</script>
 </head>
 <body>
 <!-- Navigation Bar starts -->
@@ -43,7 +55,7 @@
 
         <li ><a href="http://127.0.0.1:8000/aboutus/">ABOUT</a></li>
         
-        <li ><a href="http://127.0.0.1:8000/blogs/">BLOG</a></li>
+        <li ><a href="#">BLOG</a></li>
         <li ><a href="http://127.0.0.1:8000/faqs/">FAQS</a></li>
          
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CONTACT <span class="caret"></span></a>
@@ -70,70 +82,20 @@
  </div>
 </div>
 
-<div class="container">
- <div class="col-xs-6 col-xs-offset-3">
 
 
 
- <form action="https://test.payu.in/_payment/" method="POST">
-  
-     <div class="form-group">
-  	  <label>Full Name</label><br>
-  	  <input type="text" class="form-control" name="user" value="{{user}}">
-     </div>
-     <div class="form-group">
-  	  <label>Address</label><br>
-  	  <input type="text" class="form-control" name="address" value="{{address}}">
-     </div>
-     <div class="form-group">
-  	  <label>Landmark</label><br>
-  	  <input type="text" class="form-control" name="landmark">
-     </div>
-     <div class="form-group">
-  	  <label>City</label><br>
-  	  <input type="text" class="form-control" name="city">
-     </div>
-     <div class="row">
-     <div class="form-group col-md-6">
-  	  <label>State</label><br>
-  	  <input type="text" class="form-control" name="state">
-     </div>
-     <div class="form-group col-md-6">
-  	  <label>Pin Code</label><br>
-  	  <input type="text" class="form-control" name="pincode">
-     </div>
-     </div>
-     <div class="row">
-     <div class="form-group col-md-6">
-  	  <label>Email</label><br>
-  	  <input type="email" class="form-control" name="email" value="{{email}}">
-     </div>
-     <div class="form-group col-md-6">
-  	  <label>Contact</label><br>
-  	  <input type="text" class="form-control" name="phone" value="{{phone}}">
-     </div>
-      <input type="hidden" class="form-control" name="txnid" value="{{txnid}}">
-      <input type="hidden" class="form-control" name="amount" value="{{amount}}">
-      <input type="hidden" class="form-control" name="productinfo" value="{{productinfo}}">
-      <input type="hidden" class="form-control" name="surl" value="{{surl}}">
-      <input type="hidden" class="form-control" name="furl" value="{{furl}}">
-      <input type="hidden" class="form-control" name="firstname" value="{{user}}">
-      <input type="hidden" class="form-control" name="key" value="{{key}}">
-      <input type="hidden" class="form-control" name="salt" value="{{salt}}">
-      <input type="hidden" class="form-control" name="hash" value="{{hash_o}}">
-
-      <button type="submit" class="btn btn-default">Submit</button>
-     </div>
-
-   </form>
+<!-- Navigation Bar Ends -->
+ <div class="container">
+   <img src="error.jpg" style="margin-left:25%; margin-top:5%; margin-bottom:3%;height:480px;">
+ </div>
 
 
 
+<!-- Footer starts -->
 
-   </div>
-</div>
 
-<div class="container-fluid footer" style="margin-top:3%;">
+  <div class="container-fluid footer" style="margin-top:0%;">
 
      <div class="row">
 	 
@@ -157,6 +119,5 @@
     
   </div>
   </div>
-
-
-</body>
+  
+  <!-- footer ends -->

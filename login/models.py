@@ -9,5 +9,6 @@ class login_data(models.Model):
 	email = models.CharField(max_length=100,null=True,unique=True)
 	address = models.CharField(max_length=256,null=True)
 	status = models.SmallIntegerField(default = '0',null=True)
+	otp = models.SmallIntegerField(default = '0',null=True)
 
 	#email-verification

@@ -153,3 +153,9 @@ PAYU_INFO = {
 
 ###################End payment info ###############################
 
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sourabhrocks14@gmail.com'
+EMAIL_HOST_PASSWORD = 'ilxpeypltivzvsya'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

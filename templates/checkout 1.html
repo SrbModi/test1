@@ -75,7 +75,7 @@
 
 
 
- <form action="https://test.payu.in/_payment/" method="POST">
+ <form action="https://www.instamojo.com/api/1.1/payment-requests/" method="POST">
   
      <div class="form-group">
   	  <label>Full Name</label><br>
@@ -112,15 +112,15 @@
   	  <label>Contact</label><br>
   	  <input type="text" class="form-control" name="phone" value="{{phone}}">
      </div>
-      <input type="hidden" class="form-control" name="txnid" value="{{txnid}}">
+      <input type="hidden" class="form-control" name="id" value="{{id}}">
       <input type="hidden" class="form-control" name="amount" value="{{amount}}">
-      <input type="hidden" class="form-control" name="productinfo" value="{{productinfo}}">
-      <input type="hidden" class="form-control" name="surl" value="{{surl}}">
-      <input type="hidden" class="form-control" name="furl" value="{{furl}}">
-      <input type="hidden" class="form-control" name="firstname" value="{{user}}">
-      <input type="hidden" class="form-control" name="key" value="{{key}}">
-      <input type="hidden" class="form-control" name="salt" value="{{salt}}">
-      <input type="hidden" class="form-control" name="hash" value="{{hash_o}}">
+      <input type="hidden" class="form-control" name="purpose" value="{{purpose}}">
+      <input type="hidden" class="form-control" name="redirect_url" value="{{redirect_url}}">
+      <input type="hidden" class="form-control" name="webhook" value="{{webhook}}">
+      <input type="hidden" class="form-control" name="buyername" value="{{user}}">
+      <input type="hidden" class="form-control" name="send_email" value="{{send_email}}">
+      <input type="hidden" class="form-control" name="send_sms" value="{{send_sms}}">
+      <!-- <input type="hidden" class="form-control" name="hash" value="{{hash_o}}"> -->
 
       <button type="submit" class="btn btn-default">Submit</button>
      </div>
