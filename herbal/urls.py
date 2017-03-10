@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from login.views import *
 from adminpanel.views import home,blog,faqs,prod,sub_query,dealer_cont,customer_cont,seller_cont,sub_query,welcome
-from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func, insta
+from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func
 from django.contrib.admin import *
 
 urlpatterns = [
@@ -40,12 +40,14 @@ urlpatterns = [
     url(r'^seller_contact/',seller_cont),
     url(r'^submit_query/',sub_query),
     url(r'^checkout/',func),
-    url(r'^checkout1/',insta),
     url(r'^topayment/',topayment),
     # url(r'^test/',test),
     url(r'^welcome/',welcome),
     url(r'^buy/',func),
     url(r'^forgot_password/',forgotpass),
+    # url(r'^forgot_password/em/',forgotpass),
+    url(r'^otp/em/',accept_otp),
+    url(r'^reset_password/',reset_pass),
 ]
 
 

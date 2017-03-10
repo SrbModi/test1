@@ -356,18 +356,18 @@ def verify_hash(data, SALT):
 # 		return render(request,"checkout 1.html",context)
 
 
-@csrf_exempt
-def insta(request):
-	api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://test.instamojo.com/api/1.1/');
-	response = api.payment_request_create(
-		amount='3499',
-    	purpose='FIFA 16',
-    	send_email=True,
-    	email="sourabh.modi14@gmail.com",
-    	redirect_url="http://127.0.0.1:8000/"
-    	)
-	# print the long URL of the payment request.
-	print (response['payment_request']['longurl'])
-	# print the unique ID(or payment request ID)
-	print (response['payment_request']['id'])
-	return HttpResponse("Check the terminal")
+# @csrf_exempt
+# def insta(request):
+# 	api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://test.instamojo.com/api/1.1/');
+# 	response = api.payment_request_create(
+# 		amount='3499',
+#     	purpose='FIFA 16',
+#     	send_email=True,
+#     	email="sourabh.modi14@gmail.com",
+#     	redirect_url="http://127.0.0.1:8000/"
+#     	)
+# 	# print the long URL of the payment request.
+# 	print (response['payment_request']['longurl'])
+# 	# print the unique ID(or payment request ID)
+# 	print (response['payment_request']['id'])
+# 	return HttpResponse("Check the terminal")

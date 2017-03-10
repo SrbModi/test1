@@ -14,7 +14,7 @@ class products(models.Model):
 	prod_id = models.IntegerField()
 	short_desc = models.CharField(max_length=40,null = True)
 	desc = models.TextField() #cons - any max_length required?
-	price = models.PositiveIntegerField(null=True,blank=True)
+	price = models.PositiveIntegerField(null=True)
 	image = models.ImageField(null = True)
 	offer = models.SmallIntegerField()
 	detail_desc = models.TextField() #consult for ease of data entering #cons
