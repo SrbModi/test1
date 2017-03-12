@@ -19,13 +19,14 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from login.views import *
-from adminpanel.views import home,blog,faqs,prod,sub_query,dealer_cont,customer_cont,seller_cont,sub_query,welcome
+from adminpanel.views import home,blog,faqs,prod,sub_query,dealer_cont,customer_cont,seller_cont,sub_query,welcome, aboutus,contact_cust,contact_dealer,contact_seller
 from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func
 from django.contrib.admin import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',home),
+    url(r'^aboutus/$',aboutus),
     url(r'^signin/$',sign_in),
     url(r'^login/$',log),
     url(r'^signup/$',sign_up),
@@ -35,9 +36,9 @@ urlpatterns = [
     url(r'^cart/',cartlist),
     url(r'^blogs/',blog),
     url(r'^faqs/',faqs),
-    url(r'^dealer_contact/',dealer_cont),
-    url(r'^customer_contact/',customer_cont),
-    url(r'^seller_contact/',seller_cont),
+    url(r'^contact_cust/',contact_cust),
+    url(r'^contact_dealer/',contact_dealer),
+    url(r'^contact_seller/',contact_seller),
     url(r'^submit_query/',sub_query),
     url(r'^checkout/',func),
     url(r'^topayment/',topayment),
@@ -76,4 +77,4 @@ if settings.DEBUG :
     urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
-    
+

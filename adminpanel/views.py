@@ -16,7 +16,7 @@ from django.contrib.auth.decorators import login_required
 
 #home page
 
-url = "http://127.0.0.1:8000/"
+url = "http://srb1403.pythonanywhere.com/"
 
 def home(request):
 	if request.user.is_authenticated():
@@ -46,11 +46,11 @@ def home(request):
 		str1 += '<div class="col-xs-2"><a href="#x" class="thumbnail"><img src="'
 		str1 += str(o.image.url)
 		str1 += '" alt="Image" style="max-width:100%;"></a>'
-		str1 += '<div><div class="text-center"><a class = "text-uppercase" style="text-decoration:none; color:black; font-size:18px;" href="'
+		str1 += '<div><div class="text-center"><a class = "text-uppercase" style="text-decoration:none; color:black; font-size:18px;width:100%; margin-top:20%;" href="'
 		str1 += url + 'product/' + str(o.prod_id) + '/'
 		str1 += '">'
 		str1 += str(o.prod_name)
-		str1 +='</a><br><br><p class="text-uppercase" style="font-size:12px;">'
+		str1 +='</a><br><br><p class="text-uppercase item-desc" style="font-size:12px;">'
 		str1 += str(o.short_desc)
 		str1 += '</p></div><div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;padding-top:5%;">'
 		str1 += '<p>'
@@ -119,7 +119,7 @@ def home(request):
 		if count%5 == 0:
 			str1 += '<div class="col-xs-1"></div></div></div>'
 			str1 += '<div class="item "><div class="row-fluid"><div class="col-xs-1"></div>'
-		
+
 	if count%5 == 0:
 		str1 = str1[:-70] #removing 70 characters from the end of str1 (from statement P)
 	else:
@@ -160,7 +160,7 @@ def blog(request):
 		status = 'LOG OUT'
 	else:
 		status = 'LOG IN'
-	str1 = ' ' 
+	str1 = ' '
 	x = 1
 	for o in blogs.objects.all():
 		str1 += '<div class="panel panel-default"><div class="panel-heading"><img class="blog-img panel-title" src="'
@@ -192,7 +192,7 @@ def prod(request,id):
 		context["status"] = 'LOG IN'
 
 	o = products.objects.get(prod_id=id)
-	
+
 	context["prod_id"] = id
 	context["prod_name"] = o.prod_name
 	context["image"] = o.image.url
@@ -204,7 +204,7 @@ def prod(request,id):
 	amount = float(price - (price*offer/100))
 	amount = round(amount,2)
 	context["amount"] = amount
-	
+
 	if o.avail is True:
 		context["avail"] = "available"
 	else:
@@ -265,3 +265,42 @@ def sub_query(request):
 def welcome(request):
 	print(request.POST)
 	return render(request,"welcome.html",{})
+
+@csrf_exempt
+def aboutus(request):
+    context = {}
+    if request.user.is_authenticated():
+        context["status"]="LOG OUT"
+    else:
+        context["status"]="LOG IN"
+    return render(request,"aboutus.html",context)
+
+
+@csrf_exempt
+def contact_cust(request):
+    context = {}
+    if request.user.is_authenticated():
+        context["status"] = "LOG OUT"
+    else:
+        context["status"] = "LOG IN"
+    return render(request,"contact_cust.html",context)
+
+
+@csrf_exempt
+def contact_dealer(request):
+    context = {}
+    if request.user.is_authenticated():
+        context["status"] = "LOG OUT"
+    else:
+        context["status"] = "LOG IN"
+    return render(request,"contact_dealer.html",context)
+
+
+@csrf_exempt
+def contact_seller(request):
+    context = {}
+    if request.user.is_authenticated():
+        context["status"] = "LOG OUT"
+    else:
+        context["status"] = "LOG IN"
+    return render(request,"contact_seller.html",context)

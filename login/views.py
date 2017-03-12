@@ -58,7 +58,7 @@ def log(request):
 @csrf_exempt
 def sign_up(request):
 	print(request.POST)
-	if request.POST == {} : 
+	if request.POST == {} :
 		print("null data")
 		return render(request,"signup.html",{})
 	# else:
@@ -117,7 +117,7 @@ def forgotpass(request):
 			For any queries, contact 1800-121-2200 or drop us an email at help@medifudo.com
 
 			Note: This is an auto-generated email. Please do not reply back to it.
-			""" 
+			"""
 			print (str(otp))
 			setattr(user_row,'otp',int(otp))
 			user_row.save()
@@ -159,6 +159,7 @@ def accept_otp(request):
 
 @csrf_exempt
 def reset_pass(request):
+    # context = {}
 	print("loop :: reset_pass")
 	mail = str(request.POST.get("email"))
 	new_pass = str(request.POST.get("new_password"))
@@ -179,6 +180,7 @@ def reset_pass(request):
 
 	else:
 		print("6")
+		context = {}
 		context["message"] = "The password do not match."
 		context["email"] = mail
 		print("7")

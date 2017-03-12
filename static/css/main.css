@@ -8,25 +8,25 @@ html,body{
 {
 	padding: 0;
 	margin: 0;
-	
+
 }
 
 
 .page-header{
-	
+
 	margin:0;
-	
+
 	top:0px;
 	padding-top:2%;
 	padding-bottom:02%;
 	width: 100%;
 	z-index:1;
-	background-color:#1EBB3F;
+	background-color:#9CC603;  //background-color
 }
 .nav-container{
-	background-color:#1EBB3F;
+	background-color:#9CC603; //background-color
 }
-.navbar.navbar-default{	
+.navbar.navbar-default{
 
     border: 0;
     -webkit-box-shadow: none;
@@ -40,33 +40,36 @@ html,body{
 #myNavbar>li>a{
 	font-family: 'Comfortaa', cursive;
 	color:#ffffff;
-	font-size: 24px;
-	
+	font-size: 22px;
+
 }
 .nav{
 	font-size:20px;
+}
+.nav>li> a:hover{
+	background-color:#7AD688; //background-color
 }
 .glyphicon{
 	font-size:30px;
 	color:#ffffff;
 }
 .carousel {
-	
+
 	margin:0;
-	
-	
+
+
 	width:100%;
-	
+
 	padding-left:0;
 	padding-right:0;
-	
+
 }
 .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
       width: 100%;
       padding:0;
-     
-     
+
+
       margin: 0;
       height:530px;
   }
@@ -78,8 +81,8 @@ html,body{
   	color:#ffffff;
   	padding:10%;
 	padding-top:5%;
-  	
-	
+
+
   }
   #product{
   	padding-top:5%;
@@ -93,19 +96,19 @@ html,body{
 	border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-	
+
 }
 
 .carousel-control {
-	
+
 	margin-right:20px;
 	width:4%;
-	
+
 }
 .carousel-control .hover{
 	margin-right:0;
 	opacity:0;
-	-webkit-box-shadow: none; 
+	-webkit-box-shadow: none;
 	box-shadow:none;
 }
 .carousel-control.right , .carousel-control.left{
@@ -131,7 +134,7 @@ html,body{
 	margin-right:auto;
 	margin-top:5%;
 	margin-bottom:5%;
-	
+
 }
 .about>img{
 	width:auto;
@@ -156,4 +159,8 @@ html,body{
 }
 .asd{
 	font-size:12px;
+}
+.item-desc{
+	height:50px;
+	overflow:hidden;
 }

@@ -15,7 +15,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from uuid import uuid4
 from uuid import UUID
 import uuid
-from instamojo_wrapper import Instamojo
+# from instamojo_wrapper import Instamojo
 # from .util import generate_hash
 
 # Create your views here.
@@ -27,9 +27,9 @@ qty_global = 0
 @csrf_exempt
 def addtocart(request,id):
 	if request.user.is_authenticated():
-		user = request.user.username 
+		user = request.user.username
 		obj1 = login_data.objects.get(user = user)
-		
+
 		if cart.objects.filter(user=user).filter(prod_id=id):
 			obj2 = cart.objects.get(prod_id = id,user=user)
 			obj2.qty += int(request.POST.get("qty"))
@@ -59,11 +59,11 @@ def cartlist(request):
 		str1 = ' '
 		total = 0
 
-		user = request.user.username 
+		user = request.user.username
 		for obj1 in cart.objects.filter(user=user):
 			obj2 = products.objects.get(prod_id = obj1.prod_id)
 
-			str1 +='<form  method="POST" action="http://127.0.0.1:8000/updatecart/change/'
+			str1 +='<form  method="POST" action="http://srb1403.pythonanywhere.com/updatecart/change/'
 			str1 += str(obj1.prod_id) + '/"><td>'
 
 			str1 += '<tr><td><img src="'
@@ -118,7 +118,7 @@ def cartlist(request):
 		return HttpResponseRedirect('/signin/')
 
 
-@csrf_exempt	
+@csrf_exempt
 def change_qty(request):
 	qty_global = request.POST.get("qty")
 	print(qty_global)
@@ -126,7 +126,7 @@ def change_qty(request):
 
 @csrf_exempt
 def updatecart(request,id):
-	user = request.user.username 
+	user = request.user.username
 	obj1 = cart.objects.get(user=user,prod_id=id)
 	print(obj1.qty)
 	obj1.qty = request.POST.get("qty")
@@ -139,7 +139,7 @@ def totalamt(user):
 
 	for o in cart.objects.all():
 		if o.user == user :
-			temp = products.objects.get(prod_name = o.prod_name )
+			temp = products.objects.get(prod_id = o.prod_id )
 			price = o.price
 			offer = temp.offer
 			rate = price - (price*offer/100)
@@ -243,9 +243,9 @@ def func(request):
 	context["SALT"] = "eCwWELxi"
 	context["productinfo"] = "product"
 	context["firstname"] = username
-	context["surl"] = "http://127.0.0.1:8000/"
-	context["furl"] = "http://127.0.0.1:8000/"
-	context["curl"] = "http://127.0.0.1:8000/"
+	context["surl"] = "http://srb1403.pythonanywhere.com/"
+	context["furl"] = "http://srb1403.pythonanywhere.com/"
+	context["curl"] = "http://srb1403.pythonanywhere.com/"
 	txnid = str(uuid.uuid1().int >> 64)
 	context["txnid"] = txnid
 	amount = grandtotal(username)
@@ -258,7 +258,7 @@ def func(request):
 	context["hash_o"] = generate_hash(cleaned_data)
 
 	return render(request,"checkout.html",context)
-	
+
 
 
 
@@ -323,7 +323,7 @@ def verify_hash(data, SALT):
 	#                       </script>
 	#                   </html>
  #    """ % (settings.PAYU_INFO['payment_url'],
- #    	name, 
+ #    	name,
  #    	settings.PAYU_INFO['surl'],
  #    	9039189251,
  #    	settings.PAYU_INFO['merchant_key'],
