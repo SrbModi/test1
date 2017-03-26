@@ -4,20 +4,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="static/css/bootstrap.min.css">
- --><!-- jQuery library -->
+
+<!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
-<link href="/static/css/main.css" rel="stylesheet" type="text/css" >
+<link href="static/css/main.css" rel="stylesheet" type="text/css" >
+
+<script>$(document).ready(function() {
+  $('#Carousel').carousel({
+  interval: false
+  })
+  });
+  $(document).ready(function() {
+  $('#Carousel1').carousel({
+  interval: false
+  })
+  });
+</script>
 </head>
 <body>
+
 <!-- Navigation Bar starts -->
 
-<div class="page-header">
+<div class="page-header" style="border-bottom:0 px !important;">
   <div class="container-fluid">
     <div class="row">
      <div class="col-md-3 col-sm-12">
@@ -45,10 +58,16 @@
 
         <li ><a href="http://srb1403.pythonanywhere.com/blogs/">BLOG</a></li>
         <li ><a href="http://srb1403.pythonanywhere.com/faqs/">FAQS</a></li>
-        <li> <a href="http://srb1403.pythonanywhere.com/contact_cust/"> CONTACT</a></li>
-        <li ><a href="http://srb1403.pythonanywhere.com/login/">{{status}}</a></li>
 
+		<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CONTACT <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+		   <li><a href="http://srb1403.pythonanywhere.com/contact_cust/"> Customer</a></li>
+		   <li><a href="http://srb1403.pythonanywhere.com/contact_dealer/">Dealer</a></li>
+		   <li><a href="http://srb1403.pythonanywhere.com/contact_seller/"> Seller</a></li>
+		  </ul>
+		 <li ><a href="http://srb1403.pythonanywhere.com/login/">{{status}}</a></li>
 
+		</li>
       </ul>
       </div>
 
@@ -63,36 +82,18 @@
    </div>
  </div>
 </div>
-<div class="container" style="margin-bottom:5%;">
- <div class="row">
-   <div class="col-xs-6 col-xs-offset-3">
-     <h3 style="border-bottom:1px solid;padding-top:5%;margin-top:3%;padding-bottom:1%;">Enter Your OTP </h3>
-     <h5 style = "color: red;">{{message}}</h5>
 
-
-
-
-	 <form action="http://srb1403.pythonanywhere.com/otp/em/" method="POST">
-	   <div class="form-group" style="padding-top:5%;">
-	     <label>One Time Password</label><br>
-	     <input type="text" class="form-control" name="otp" placeholder="4-digit code" required >
-       <input type="hidden" name="email" value={{email}} hidden>
-	   </div>
-	   <button type="submit" class="btn btn-default" >Reset Password</button><br><br>
-
-
-
-
-
-
-	 </form>
-
-   </div>
-
-   </div>
-
+<!-- Navigation Bar Ends -->
+ <div class="container">
+   <img src="static/img/error.jpg" style="margin-left:25%; margin-top:5%; margin-bottom:3%;height:480px;">
  </div>
-<div class="container-fluid footer">
+
+
+
+<!-- Footer starts -->
+
+
+  <div class="container-fluid footer" style="margin-top:0%;">
 
      <div class="row">
 
@@ -100,25 +101,21 @@
        <h3>About</h3>
        <p> One of the Pioneers in the field of ayurveda medicine and in house product</p>
       </div>
-      <div class="col-md-4 col-md-offset-1">
+      <div class="col-md-3">
         <h3>Information</h3>
-         <li style="list-style:none"><a href=# style="text-decoration:none;color:#ffffff;">Shipping Policy</a></li>
-         <li style="list-style:none"><a href="http://srb1403.pythonanywhere.com/faqs/" style="text-decoration:none;color:#ffffff;">Frequently Asked Questions</a></li>
-         <li style="list-style:none" ><a href="http://srb1403.pythonanywhere.com/blogs/" style="text-decoration:none;color:#ffffff;">Blogs</a></li>
-
+        <ul >
+         <li style="list-style:none"><a href="http://srb1403.pythonanywhere.com/faqs/" style="text-decoration:none;color:#ffffff;"><span>FAQS</span></a></li>
+         <li style="list-style:none" ><a href="http://srb1403.pythonanywhere.com/blogs/" style="text-decoration:none;color:#ffffff;"><span>BLOGS</span></a></li>
+        <ul>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <h3>Contact Us</h3>
-        <span>Elex gallery ,Floor no.-2,Elex Department,NIT Raipur,Chhattisgarh</span> <br><br>
-        <a href="http://srb1403.pythonanywhere.com/contact_cust/"><button type="button" class="btn btn-default">CONTACT</button></a>
+        <span>Elex gallery ,Floor no.-2,Elex Department,NIT Raipur,Chhattisgarh</span>
       </div>
-
+      <div class="col-md-3"></div>
 
 
   </div>
   </div>
 
-
-
-</body>
-</html>
+  <!-- footer ends -->
