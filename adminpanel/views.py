@@ -211,12 +211,77 @@ def prod(request,id):
 		context["avail"] = "not available"
 
 	context["desc"] = o.desc
-	context["nutrient_1"] = o.nut_1
-	context["nutrient_2"] = o.nut_2
-	context["nutrient_3"] = o.nut_3
-	context["nutrient_4"] = o.nut_4
-	context["nutrient_5"] = o.nut_5
 
+	nut = ""
+
+	if o.Fibre != 0:
+		nut += "<tr><td>"
+		nut += "Fibre"
+		nut += "</td><td>"
+		nut += str(o.Fibre)
+		nut += "</td></tr>"
+	if o.Fat != 0:
+		nut += "<tr><td>"
+		nut += "Fat"
+		nut += "</td><td>"
+		nut += str(o.Fat)
+		nut += "</td></tr>"
+	if o.Protein != 0:
+		nut += "<tr><td>"
+		nut += "Protein"
+		nut += "</td><td>"
+		nut += str(o.Protein)
+		nut += "</td></tr>"
+	if o.Vitamin_C != 0:
+		nut += "<tr><td>"
+		nut += "Vitamin C"
+		nut += "</td><td>"
+		nut += str(o.Vitamin_C)
+		nut += "</td></tr>"
+	if o.Total_Carbohydrates != 0:
+		nut += "<tr><td>"
+		nut += "Total Carbohydrates"
+		nut += "</td><td>"
+		nut += str(o.Total_Carbohydrates)
+		nut += "</td></tr>"
+	if o.Sugar != 0:
+		nut += "<tr><td>"
+		nut += "Sugar"
+		nut += "</td><td>"
+		nut += str(o.Sugar)
+		nut += "</td></tr>"
+	if o.Iron != 0:
+		nut += "<tr><td>"
+		nut += "Iron"
+		nut += "</td><td>"
+		nut += str(o.Iron)
+		nut += "</td></tr>"
+	if o.Calcium != 0:
+		nut += "<tr><td>"
+		nut += "Calcium"
+		nut += "</td><td>"
+		nut += str(o.Calcium)
+		nut += "</td></tr>"
+	if o.Calorific_value != 0:
+		nut += "<tr><td>"
+		nut += "Calorific value"
+		nut += "</td><td>"
+		nut += str(o.Calorific_value)
+		nut += "</td></tr>"
+	if o.Crude_Fibre != 0:
+		nut += "<tr><td>"
+		nut += "Crude Fibre"
+		nut += "</td><td>"
+		nut += str(o.Crude_Fibre)
+		nut += "</td></tr>"
+	if o.Sodium != 0:
+		nut += "<tr><td>"
+		nut += "Sodium"
+		nut += "</td><td>"
+		nut += str(o.Sodium)
+		nut += "</td></tr>"
+
+	context["nut"] = nut
 	return render(request,"product.html",context)
 
 
