@@ -10,9 +10,9 @@ class imageslideradmin(admin.ModelAdmin):
 	search_fields = ["=image"]
 
 class productsadmin(admin.ModelAdmin):
-	list_display = ["section","prod_name","prod_id","desc","price","offer","detail_desc","avail"]
+	list_display = ["section","prod_name","prod_id","desc","price","offer","avail"]
 	# fields = ["section","prod_name"]
-	list_display_links = ["section","prod_name","prod_id","desc","price","offer","detail_desc","avail"]
+	list_display_links = ["section","prod_name","prod_id","desc","price","offer","avail"]
 	search_fields = ["=section","=prod_name","=prod_id","=price","=offer","=avail"]
 	list_per_page = 100
 
