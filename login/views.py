@@ -187,3 +187,13 @@ def reset_pass(request):
 		return render(request,"reset_pass.html",context)
 	print("8")
 	return HttpResponse("DOne")
+
+
+
+def handler(request):
+    #create some variables here if you like
+    path = request.path
+    response = render_to_response('404.html', locals(),
+                              context_instance=RequestContext(request))
+    response.status_code = 404
+    return (response)

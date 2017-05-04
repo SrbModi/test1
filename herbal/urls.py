@@ -22,8 +22,12 @@ from login.views import *
 from adminpanel.views import home,blog,faqs,prod,sub_query,dealer_cont,customer_cont,seller_cont,sub_query,welcome, aboutus,contact_cust,contact_dealer,contact_seller
 from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func
 from django.contrib.admin import *
+from django.views.generic.base import  RedirectView
+# import django.views.defaults
 
 urlpatterns = [
+
+    # ('^404testing/$', direct_to_template, {'template': '404.html'})
     url(r'^admin/', admin.site.urls),
     url(r'^$',home),
     url(r'^aboutus/$',aboutus),
@@ -49,32 +53,20 @@ urlpatterns = [
     # url(r'^forgot_password/em/',forgotpass),
     url(r'^otp/em/',accept_otp),
     url(r'^reset_password/',reset_pass),
+
+    # url(r'^404/$', django.views.defaults.page_not_found),
 ]
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# handler404 = 'handler'
 
 
 admin.site.site_header = "XYZ HERBAL PRODUCTS"
 # AdminSite.site_title = "check it"
-# admin.site.site_url = "http://www.google.com/" - to change the link to "view site" option
-
-
-if settings.DEBUG :
+# admin.site.site_url = "http://srb1403.pythonanywhere.com/" - to change the link to "view site" option
+if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
-
+# urlpatterns += [url(r'^.*$', RedirectView.as_view(url='/',permanent=False),name='index'),]
