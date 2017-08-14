@@ -168,7 +168,6 @@ def checkout(request):
 def topayment(request):
 	order_delivery.objects.create(
 		user = request.POST.get("user"),
-		#order_id = request.POST.get("user"),
 		email = request.POST.get("email"),
 		address = request.POST.get("address"),
 		landmark = request.POST.get("landmark"),

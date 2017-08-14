@@ -14,7 +14,6 @@ class cart(models.Model):
 
 class order_content(models.Model):
     user = models.CharField(max_length=50, default='user')
-    order_id = models.SmallIntegerField()
     prod_name = models.CharField(max_length=15)
     prod_id = models.IntegerField()
     price = models.PositiveIntegerField(null=True,blank=True)
@@ -24,7 +23,6 @@ class order_content(models.Model):
 
 class order_delivery(models.Model):
 	user = models.CharField(max_length=50)
-	order_id = models.SmallIntegerField()
 	contact = models.BigIntegerField(default=0000000000)
 	email = models.CharField(max_length=100,null=True,unique=True)
 	address = models.CharField(max_length=256,null=True)
