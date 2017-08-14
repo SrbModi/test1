@@ -53,6 +53,7 @@ urlpatterns = [
     # url(r'^forgot_password/em/',forgotpass),
     url(r'^otp/em/',accept_otp),
     url(r'^reset_password/',reset_pass),
+    # url(r'^thankyou/',thankyou),
 
     # url(r'^404/$', django.views.defaults.page_not_found),
 ]
@@ -62,7 +63,7 @@ urlpatterns = [
 # handler404 = 'handler'
 
 
-admin.site.site_header = "XYZ HERBAL PRODUCTS"
+admin.site.site_header = "MEDIFUDO"
 # AdminSite.site_title = "check it"
 # admin.site.site_url = "http://srb1403.pythonanywhere.com/" - to change the link to "view site" option
 if settings.DEBUG:
