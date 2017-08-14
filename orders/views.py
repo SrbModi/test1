@@ -15,7 +15,11 @@ from django.core.exceptions import ObjectDoesNotExist
 from uuid import uuid4
 from uuid import UUID
 import uuid
+<<<<<<< Updated upstream
 # from instamojo_wrapper import Instamojo
+=======
+#from instamojo_wrapper import Instamojo
+>>>>>>> Stashed changes
 # from .util import generate_hash
 
 # Create your views here.
@@ -258,6 +262,10 @@ def func(request):
 # 	context["hash_o"] = generate_hash(cleaned_data)
 
 	return render(request,"checkout.html",context)
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 
 
@@ -372,6 +380,7 @@ def thankyou(request):
 	Email : %s
 	city : %s
 
+<<<<<<< Updated upstream
 
 	Follow the link
 	Order Contents : http://srb1403.pythonanywhere.com/admin/orders/order_content/
@@ -397,3 +406,20 @@ def thankyou(request):
 # 	    context = {}
 # 	    context["message"] = "Sorry. We were unale to process your request due to some internal error.Please try again"
 # 	    return render(request,"thankyou.html",context)
+=======
+# @csrf_exempt
+# def insta(request):
+# 	api = Instamojo(api_key=API_KEY, auth_token=AUTH_TOKEN, endpoint='https://test.instamojo.com/api/1.1/');
+# 	response = api.payment_request_create(
+# 		amount='3499',
+#     	purpose='FIFA 16',
+#     	send_email=True,
+#     	email="sourabh.modi14@gmail.com",
+#     	redirect_url="http://127.0.0.1:8000/"
+#     	)
+# 	# print the long URL of the payment request.
+# 	print (response['payment_request']['longurl'])
+# 	# print the unique ID(or payment request ID)
+# 	print (response['payment_request']['id'])
+# 	return HttpResponse("Check the terminal")
+>>>>>>> Stashed changes
