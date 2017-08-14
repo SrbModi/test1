@@ -1,0 +1,28 @@
+.carousel {
+	margin-bottom: 0;
+	padding: 30px 40px 30px 40px;
+	border: none;
+	border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	
+}
+
+.carousel-control {
+	
+	margin-right:0;
+	
+}
+.carousel-control .hover{
+	margin-right:0;
+	opacity:0;
+}
+/*.carousel-control.right {
+	right: -12px;
+}*/
+.thumbnail {
+    border: 0;
+    box-shadow: none;
+}
+
+

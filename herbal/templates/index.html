@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+<link href="/static/css/main.css" rel="stylesheet" type="text/css" >
+
+<script>$(document).ready(function() {
+  $('#Carousel').carousel({
+  interval: false
+  })
+  });
+  $(document).ready(function() {
+  $('#Carousel1').carousel({
+  interval: false
+  })
+  });
+</script>
+</head>
+
+<!-- body starts -->
+<body>
+
+<!-- Navigation Bar starts -->
+
+<div class="page-header" style="padding-top:1%; ">
+  <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-3 col-sm-12">
+
+       <a href=# style="padding-top:0% ;margin-left: 0px;margin-top: 0%;"><img src="/static/img/logo.png" style="height:75px;width: 200px;padding-top:0% ;margin-left: 50px;margin-top: 0%;"></a>
+
+     </div>
+     <div class="col-md-7 col-sm-10">
+      <nav class="navbar navbar-default" style="margin-top:2.5%;" >
+      <div id="navbar" class="container-fluid nav-container">
+       <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav" id="myNavbar">
+        <li  ><a href="#">HOME</a></li>
+
+
+        <li ><a href="http://srb1403.pythonanywhere.com/aboutus/">ABOUT</a></li>
+
+        <li ><a href="http://srb1403.pythonanywhere.com/blogs/">BLOG</a></li>
+        <li ><a href="http://srb1403.pythonanywhere.com/faqs/">FAQS</a></li>
+
+		<li> <a href="http://srb1403.pythonanywhere.com/contact_cust/"> CONTACT</a></li>
+		 <li ><a href="http://srb1403.pythonanywhere.com/login/">{{status}}</a></li>
+
+
+      </ul>
+      </div>
+
+     </div>
+      </nav>
+     </div>
+     <div class="col-md-2 col-sm-2">
+       <ul class="nav navbar-nav" style="margin-top:4.5%;">
+                <li><a href="http://srb1403.pythonanywhere.com/cart/"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+      </ul>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Navigation Bar Ends -->
+
+
+<!-- Images Slider Automatic -->
+
+<div class=" no-padding col-md-12 col-sm-12">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+    <!-- Indicators -->
+  <!--   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+
+    </ol> -->
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" style="padding:0;"role="listbox">
+
+    <!-- wrap start -->
+      {{slider|safe}}
+       <!-- <div class="item active">
+
+        <img src="Banner2.jpg"  >
+
+      </div>
+
+      <div class="item">
+        <img src="Banner2.jpg"  >
+
+      </div>
+
+      <div class="item">
+        <img src="Banner2.jpg"  >
+
+      </div>  -->
+      <!-- wrap end -->
+
+
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" style="padding:0;" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left slider" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" style="padding:0;" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right slider" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- Image slider automatic End -->
+
+<!-- Static Images -->
+
+<div class="container" >
+ <div class="row " >
+   <section>
+<div class="col-xs-4 col-sm-4 col-md-4 text-center about"><img class="image-responsive" style="height:150px;width:150px;" src="/static/img/icon-1.png" ></div>
+<div class="col-xs-4 col-sm-4 col-md-4 text-center about"><img class="image-responsive" style="height:150px;width:150px;" src="/static/img/icon-2.png" ></div>
+<div class="col-xs-4 col-sm-4 col-md-4 text-center about"><img class="image-responsive" style="height:150px;width:150px;" src="/static/img/icon-3.png" ></div>
+   </section>
+ </div>
+</div>
+
+<!-- static images end -->
+
+
+<!-- Products slider 1 start -->
+
+
+<div id="product" class="container-fluid ">
+
+  <div class="span8">
+      <div class="container">
+    <h2 style="font-family: 'Comfortaa'; margin:3%; font-size:35px;font-weight:bold;border-bottom:1px solid ;"> PICKEL</h2>
+    </div>
+
+
+
+
+
+    <div id="Carousel" class="carousel slide" >
+
+
+
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+
+
+      <!-- product row 1 -->
+
+<!--     <div class="item active">
+
+        <div class="row-fluid">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+        <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+            </div>
+      </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+        <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+            </div>
+      </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+        <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+            </div>
+      </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+        <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+            </div>
+      </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+        <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+            </div>
+      </div>
+          <div class="col-xs-1"></div>
+        </div><!--/row-fluid-->
+    <!-- </div> --><!--/item-->
+
+
+
+
+
+
+<!--
+
+    <div class="item">
+        <div class="row-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2">
+              <a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+              <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+              </div>
+            </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+       <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+       </div>
+      </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+       <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+       </div>
+      </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+       <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+       </div>
+      </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+       <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+       </div>
+      </div>
+            <div class="col-xs-1"></div>
+        </div> --><!--/row-fluid-->
+    <!-- </div> --><!--/item-->
+
+    <!-- <div class="item">
+        <div class="row-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+       <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+              </div>
+      </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+       <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+              </div>
+      </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+       <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+              </div>
+      </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+       <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+              </div>
+      </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+       <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a>
+                   <p>good for health</p>
+                 </div>
+                 <div class="text-center">
+                   200
+
+                 </div>
+
+
+              </div>
+      </div>
+            <div class="col-xs-1"></div>
+        </div> --><!--/row-fluid-->
+    <!-- </div> --><!--/item-->
+
+    {{pickel|safe}}
+
+
+    </div><!--/carousel-inner-->
+
+    <a class="left carousel-control" href="#Carousel" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left static" aria-hidden="true"></span></a>
+    <a class="right carousel-control" href="#Carousel" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right static" aria-hidden="true"></span></a>
+    </div><!--/Carousel-->
+
+
+  </div>
+</div>
+
+
+<!-- Product Slider 1 ends -->
+
+
+<!-- Product Slider 2 starts -->
+
+<div id="product"class="container-fluid">
+
+  <div class="span8">
+
+    <div class="container">
+    <h2 style="font-family: 'Comfortaa'; margin:3%; font-size:35px;font-weight:bold;border-bottom:1px solid ;"> AMLA</h2>
+    </div>
+
+
+
+    <div id="Carousel1" class="carousel slide">
+
+
+
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+
+     <!-- <div class="item active">
+        <div class="row-fluid">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+
+            </div>
+		  </div>
+          <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+		    <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+
+            </div>
+		  </div>
+          <div class="col-xs-1"></div>
+        </div> --> <!--/row-fluid-->
+     <!-- </div> --> <!--/item-->
+
+     <!-- <div class="item">
+        <div class="row-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2">
+              <a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+              <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+
+              </div>
+            </div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div>
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+			 </div>
+			</div>
+            <div class="col-xs-1"></div>
+        </div> --> <!--/row-fluid-->
+     <!-- </div> --> <!--/item-->
+
+    <!--  <div class="item">
+        <div class="row-fluid">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s3.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s6.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s7.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+
+              </div>
+			</div>
+            <div class="col-xs-2"><a href="#x" class="thumbnail"><img src="s8.jpg" alt="Image" style="max-width:100%;"></a>
+			 <div >
+                 <div class="text-center">
+                   <a href=#>Amla Juice</a><br><br>
+                   <p class="text-uppercase" style="font-size:12px;">good for health good for health good for health</p>
+                 </div>
+                 <div class="text-center" style="font-size:18px; border-top: dashed 1px; border-bottom: dashed 1px;">
+                   ₹200
+
+                 </div>
+
+              </div>
+			</div>
+            <div class="col-xs-1"></div>
+        </div> --> <!--/row-fluid-->
+     <!-- </div> --> <!--/item-->
+
+
+    {{amla|safe}}
+
+
+    </div><!--/carousel-inner-->
+
+    <a class="left carousel-control" href="#Carousel1" data-slide="prev">
+  <span class="glyphicon glyphicon-chevron-left static" aria-hidden="true"></span></a>
+    <a class="right carousel-control" href="#Carousel1" data-slide="next">
+  <span class="glyphicon glyphicon-chevron-right static" aria-hidden="true"></span></a>
+    </div><!--/Carousel-->
+
+
+  </div>
+</div>
+
+
+<!-- Product slider 2 ends -->
+
+
+<!-- Static Image -->
+
+
+<div class="container-fluid" style="width:100%;padding:0;margin:0;">
+  <div class="col-xs-12" style="width:100%;padding:0;margin:0;">
+     <a href="http://srb1403.pythonanywhere.com/blogs/" ><img src="/static/img/Banner.jpg" style="width:100%;padding:0;margin:0;"></a>
+  </div>
+</div>
+
+<!-- Statc Image ends -->
+
+<!-- Footer starts -->
+
+
+  <div class="container-fluid footer">
+
+     <div class="row">
+
+      <div class="col-md-3" >
+       <h3>About</h3>
+       <p> One of the Pioneers in the field of ayurveda medicine and in house product</p>
+      </div>
+      <div class="col-md-4 col-md-offset-1">
+        <h3>Information</h3>
+         <li style="list-style:none"><a href=# style="text-decoration:none;color:#ffffff;">Shipping Policy</a></li>
+         <li style="list-style:none"><a href="http://srb1403.pythonanywhere.com/faqs/" style="text-decoration:none;color:#ffffff;">Frequently Asked Questions</a></li>
+         <li style="list-style:none" ><a href="http://srb1403.pythonanywhere.com/blogs/" style="text-decoration:none;color:#ffffff;">Blogs</a></li>
+
+      </div>
+      <div class="col-md-4">
+        <h3>Contact Us</h3>
+        <span>Shop No-04, Near Sundar Nagar, Post Office, Sundar Nagar, Raipur-492003(C.G)</span><br>
+        <span>Customer Care: +91 89660-40309</span><br><br>
+        <a href="http://srb1403.pythonanywhere.com/contact_cust/"><button type="button" class="btn btn-default">CONTACT</button></a>
+      </div>
+
+
+
+  </div>
+  </div>
+
+  <!-- footer ends -->
+
+ </body>
+ </html>

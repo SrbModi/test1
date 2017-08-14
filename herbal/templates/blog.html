@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="static/css/bootstrap.min.css">
+ --><!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+<link href="/static/css/main.css" rel="stylesheet" type="text/css" >
+</head>
+<body>
+<!-- Navigation Bar starts -->
+
+<div class="page-header">
+  <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-3 col-sm-12">
+
+       <a href="http://srb1403.pythonanywhere.com/" style="padding-top:0% ;margin-left: 0px;margin-top: 0%;"><img src="/static/img/logo.png" style="height:75px;width: 200px;padding-top:0% ;margin-left: 50px;margin-top: 0%;"></a>
+
+     </div>
+     <div class="col-md-7 col-sm-10">
+      <nav class="navbar navbar-default ">
+      <div id="navbar" class="container-fluid nav-container">
+       <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+       </div>
+       <div class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav" id="myNavbar">
+        <li  ><a href="http://srb1403.pythonanywhere.com/">HOME</a></li>
+
+
+        <li ><a href="http://srb1403.pythonanywhere.com/aboutus/">ABOUT</a></li>
+
+        <li ><a href="http://srb1403.pythonanywhere.com/blogs/">BLOG</a></li>
+        <li ><a href="http://srb1403.pythonanywhere.com/faqs/">FAQS</a></li>
+
+        <li> <a href="http://srb1403.pythonanywhere.com/contact_cust/"> CONTACT</a></li>
+        <li ><a href="http://srb1403.pythonanywhere.com/login/">{{status}}</a></li>
+
+
+      </ul>
+     </div>
+
+     </div>
+      </nav>
+     </div>
+     <div class="col-md-2 col-sm-2">
+       <ul class="nav navbar-nav ">
+                <li><a href="http://srb1403.pythonanywhere.com/cart/"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+      </ul>
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Navigation Bar Ends -->
+
+
+<!-- BLOG PAGE BEGINS -->
+
+<div class="container" style="margin-top:4%;">
+ <div class="panel-group" id="accordion">
+
+        <!-- BLOG 1 STARTS -->
+        <!-- <div class="panel panel-default">
+            <div class="panel-heading">
+                <img class="panel-title blog-img" src="blog2.jpg"></img>
+				<h3> blog 1 </h3>
+                <h5 >February 27,2017 <button type="button" class="accordion-toggle collapsed btn btn-success btn-lg" data-toggle="collapse" data-parent="#accordion" href="#collapse1"style="margin-left:80%;">Read</button></h5>
+
+            </div>
+            <div id="collapse1" class="panel-collapse collapse ">
+                <div class="panel-body">
+                    Account registration at <strong>PrepBootstrap</strong> is only required if you will be selling or buying themes.
+                    This ensures a valid communication channel for all parties involved in any transactions.
+                </div>
+            </div>
+
+        </div>
+        <!-- BLOG 1 ENDS -->
+          <!-- BLOG 2 STARTS -->
+		         <!-- <div class="panel panel-default">
+            <div class="panel-heading">
+                <img class="panel-title blog-img" src="blog1.jpg"></img>
+                 <h3> blog 2    </h3>
+				 <h5> February 27, 2017 <button type="button" class="accordion-toggle collapsed btn btn-success btn-lg" data-toggle="collapse" data-parent="#accordion" href="#collapse2"style="margin-left:80%;">Read</button>
+				 </h5>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse ">
+                <div class="panel-body">
+                    Account registration at <strong>PrepBootstrap</strong> is only required if you will be selling or buying themes.
+                    This ensures a valid communication channel for all parties involved in any transactions.
+                </div>
+            </div> -->
+
+        <!-- </div> -->
+        <!-- BLOG 2 ENDS -->
+
+        {{data|safe|linebreaks}}
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<div class="container-fluid footer">
+
+     <div class="row">
+
+      <div class="col-md-3" >
+       <h3>About</h3>
+       <p> One of the Pioneers in the field of ayurveda medicine and in house product</p>
+      </div>
+      <div class="col-md-4 col-md-offset-1">
+        <h3>Information</h3>
+         <li style="list-style:none"><a href=# style="text-decoration:none;color:#ffffff;">Shipping Policy</a></li>
+         <li style="list-style:none"><a href="http://srb1403.pythonanywhere.com/faqs/" style="text-decoration:none;color:#ffffff;">Frequently Asked Questions</a></li>
+         <li style="list-style:none" ><a href="http://srb1403.pythonanywhere.com/blogs/" style="text-decoration:none;color:#ffffff;">Blogs</a></li>
+
+      </div>
+      <div class="col-md-4">
+        <h3>Contact Us</h3>
+        <span>Elex gallery ,Floor no.-2,Elex Department,NIT Raipur,Chhattisgarh</span> <br><br>
+        <a href="http://srb1403.pythonanywhere.com/contact_cust/"><button type="button" class="btn btn-default">CONTACT</button></a>
+      </div>
+
+
+
+  </div>
+  </div>
+
+ </body>
+ </html>

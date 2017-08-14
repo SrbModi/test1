@@ -1,0 +1,174 @@
+html,body{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+
+}
+.no-padding
+{
+	padding: 0;
+	margin: 0;
+
+}
+
+
+.page-header{
+
+	margin:0;
+
+	top:0px;
+	padding-top:2%;
+	padding-bottom:02%;
+	width: 100%;
+	z-index:1;
+	background-color:#9CC603;  //background-color
+}
+.nav-container{
+	background-color:#9CC603; //background-color
+}
+.navbar.navbar-default{
+
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.navbar.navbar-default .navbar-collapse {
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+#myNavbar>li>a{
+	font-family: 'Comfortaa', cursive;
+	color:#ffffff;
+	font-size: 22px;
+
+}
+.nav{
+	font-size:20px;
+}
+.nav>li> a:hover{
+	background-color:#9CC603; //background-color
+}
+.glyphicon{
+	font-size:30px;
+	color:#ffffff;
+}
+.carousel {
+
+	margin:0;
+
+
+	width:100%;
+
+	padding-left:0;
+	padding-right:0;
+
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      padding:0;
+
+
+      margin: 0;
+      height:530px;
+  }
+  .slider{
+	  color:#46662d;
+  }
+  .footer{
+  	background-color:rgb(45,55,56);
+  	color:#ffffff;
+  	padding:10%;
+	padding-top:5%;
+
+
+  }
+  #product{
+  	padding-top:5%;
+  	padding-bottom:5%;
+  }
+  #carousel {
+	margin-bottom: 0;
+	padding: 30px 40px 30px 40px;
+	border: none;
+	width:100%
+	border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+
+.carousel-control {
+
+	margin-right:20px;
+	width:4%;
+
+}
+.carousel-control .hover{
+	margin-right:0;
+	opacity:0;
+	-webkit-box-shadow: none;
+	box-shadow:none;
+}
+.carousel-control.right , .carousel-control.left{
+	background-image:none;
+	right: -12px;
+}
+/*.glyphicon-chevron-left,.glyphicon-chevron-right{
+	color:red;
+}*/
+.static{
+	color:green;
+}
+.thumbnail {
+    border: 0;
+    box-shadow: none;
+}
+.thumbnail>img{
+	width:150px;
+	height:150px;
+}
+.about{
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:5%;
+	margin-bottom:5%;
+
+}
+.about>img{
+	width:auto;
+	height:200px;
+}
+.panel,.panel-default{
+	border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+	background-color:#ffffff;
+}
+.panel-default >.panel-heading{
+	background-color:#ffffff;
+}
+.blog-img{
+	width:100%;
+	height:350px;
+}
+.contact-img{
+	width:100%;
+	height:300px;
+}
+.asd{
+	font-size:12px;
+}
+.item-desc{
+	height:50px;
+	overflow:hidden;
+}
+.item_name{
+	height:50px;
+	overflow:hidden;
+
+}
+.item_price{
+	height:
+}
