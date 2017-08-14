@@ -21,11 +21,15 @@ from django.conf.urls.static import static
 from login.views import *
 <<<<<<< Updated upstream
 from adminpanel.views import home,blog,faqs,prod,sub_query,dealer_cont,customer_cont,seller_cont,sub_query,welcome, aboutus,contact_cust,contact_dealer,contact_seller
+<<<<<<< HEAD
 from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func, thankyou
 =======
 from adminpanel.views import home,blog,faqs,prod,sub_query,dealer_cont,customer_cont,seller_cont,sub_query,welcome
 from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func
 >>>>>>> Stashed changes
+=======
+from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func,thankyou
+>>>>>>> 25a7f5cdc11f146d36bcd8e0ecd7134962fd4a13
 from django.contrib.admin import *
 from django.views.generic.base import  RedirectView
 # import django.views.defaults

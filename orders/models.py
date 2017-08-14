@@ -13,7 +13,11 @@ class cart(models.Model):
 	qty = models.SmallIntegerField(default = 1)
 
 class order_content(models.Model):
+<<<<<<< HEAD
     user = models.CharField(max_length=15)
+=======
+    user = models.CharField(max_length=50, default='user')
+>>>>>>> 25a7f5cdc11f146d36bcd8e0ecd7134962fd4a13
     order_id = models.SmallIntegerField()
     prod_name = models.CharField(max_length=15)
     prod_id = models.IntegerField()
