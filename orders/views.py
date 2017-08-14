@@ -341,57 +341,59 @@ def func(request):
 
 @csrf_exempt
 def thankyou(request):
-	try:
-		username = request.POST.get("user")
-		for o in cart.objects.filter(user=username):
-			obj = adminpanel.objects.filter(prod_id=o.prod_id)
-			order_content.objects.create(
-				user = username,
-				prod_name = o.prod_name,
-				prod_id = o.prod_id,
-				price = o.price,
-				qty = o.qty,
-				offer = obj.offer
-				)
-		order_delivery.objects.create(
-			user = request.POST.get("user"),
-			email = request.POST.get("email"),
-			address = request.POST.get("address"),
-			landmark = request.POST.get("landmark"),
-			city = request.POST.get("city"),
-			state = request.POST.get("state"),
-			pincode = request.POST.get("pincode")
+# 	try:
+	username = request.POST.get("user")
+	for o in cart.objects.filter(user=username):
+		obj = products.objects.get(prod_id=o.prod_id)
+		order_content.objects.create(
+			user = username,
+			prod_name = o.prod_name,
+			prod_id = o.prod_id,
+			price = o.price,
+			qty = o.qty,
+			offer = obj.offer
+			)
+	print("1");
+	order_delivery.objects.create(
+		user = request.POST.get("user"),
+		email = request.POST.get("email"),
+		address = request.POST.get("address"),
+		landmark = request.POST.get("landmark"),
+		city = request.POST.get("city"),
+		state = request.POST.get("state"),
+		pincode = request.POST.get("pincode")
+		)
+
+	msg = """Hello Admin.
+	The  user - %s has placed an order. Please visit the admin panel and check the order under "Order Content" for order details and "Order Delivery" for details of delivery
+	Contact details of user:
+	Name : %s
+	Contact : %s
+	Email : %s
+	city : %s
+
+
+	Follow the link
+	Order Contents : http://srb1403.pythonanywhere.com/admin/orders/order_content/
+	Order Delivery : http://srb1403.pythonanywhere.com/admin/orders/order_delivery/
+
+
+	Thank You. Have A great Day.
+	"""
+	send_mail(
+			"New Order from MediFudo.com",
+			msg %(username,username,request.POST.get("contact"),request.POST.get("email"),request.POST.get("city")),
+			'sourabhrocks14@gmail.com',
+			[str(email)],
+			fail_silently=False,
 			)
 
-		msg = """Hello Admin.
-		The  user - %s has placed an order. Please visit the admin panel and check the order under "Order Content" for order details and "Order Delivery" for details of delivery
-		Contact details of user:
-		Name : %s
-		Contact : %s
-		Email : %s
-		city : %s
+	context = {}
+	context["message"] = "Thank You. You will soon be contacted by our representative."
 
-
-		Follow the link
-		Order Contents : http://srb1403.pythonanywhere.com/admin/orders/order_content/
-		Order Delivery : http://srb1403.pythonanywhere.com/admin/orders/order_delivery/
-
-
-		Thank You. Have A great Day.
-		"""
-		send_mail(
-				"New Order from MediFudo.com",
-				msg %(username,username,request.POST.get("contact"),request.POST.get("email"),request.POST.get("city")),
-				'sourabhrocks14@gmail.com',
-				[str(email)],
-				fail_silently=False,
-				)
-
-		context = {}
-		context["message"] = "Thank You. You will soon be contacted by our representative."
-
-		return render(request,"thankyou.html",context)
-	except:
-		context = {}
-		context["message"] = "Sorry. We were unale to process your request due to some internal error.Please try again"
-		return render(request,"thankyou.html",context)
+	return render(request,"thankyou.html",context)
+# 	except Exception as e:
+# 	    print (str(e))
+# 	    context = {}
+# 	    context["message"] = "Sorry. We were unale to process your request due to some internal error.Please try again"
+# 	    return render(request,"thankyou.html",context)

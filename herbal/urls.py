@@ -20,7 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from login.views import *
 from adminpanel.views import home,blog,faqs,prod,sub_query,dealer_cont,customer_cont,seller_cont,sub_query,welcome, aboutus,contact_cust,contact_dealer,contact_seller
-from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func
+from orders.views import addtocart,cartlist,updatecart,checkout,topayment, func, thankyou
 from django.contrib.admin import *
 from django.views.generic.base import  RedirectView
 # import django.views.defaults
@@ -53,7 +53,7 @@ urlpatterns = [
     # url(r'^forgot_password/em/',forgotpass),
     url(r'^otp/em/',accept_otp),
     url(r'^reset_password/',reset_pass),
-    # url(r'^thankyou/',thankyou),
+    url(r'^thankyou/',thankyou),
 
     # url(r'^404/$', django.views.defaults.page_not_found),
 ]

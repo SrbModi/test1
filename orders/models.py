@@ -13,12 +13,13 @@ class cart(models.Model):
 	qty = models.SmallIntegerField(default = 1)
 
 class order_content(models.Model):
-	order_id = models.SmallIntegerField()
-	prod_name = models.CharField(max_length=15)
-	prod_id = models.IntegerField()
-	price = models.PositiveIntegerField(null=True,blank=True)
-	qty = models.SmallIntegerField(default = 1)
-	offer = models.SmallIntegerField()
+    user = models.CharField(max_length=15)
+    order_id = models.SmallIntegerField()
+    prod_name = models.CharField(max_length=15)
+    prod_id = models.IntegerField()
+    price = models.PositiveIntegerField(null=True,blank=True)
+    qty = models.SmallIntegerField(default = 1)
+    offer = models.SmallIntegerField()
 
 
 class order_delivery(models.Model):

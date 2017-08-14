@@ -6,7 +6,7 @@ class cartadmin(admin.ModelAdmin):
 	list_display = ["user","contact","email","prod_name","prod_id","qty"]
 
 class order_contentadmin(admin.ModelAdmin):
-	list_display = ["order_id","prod_name","prod_id","price","qty","offer"]
+	list_display = ["user","order_id","prod_name","prod_id","price","qty","offer"]
 
 class order_deliveryadmin(admin.ModelAdmin):
 	list_display = ["user","order_id","contact","address","landmark","city","state","pincode"]

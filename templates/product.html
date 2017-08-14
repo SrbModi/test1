@@ -13,6 +13,13 @@
 <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
 
 <link href="/static/css/main.css" rel="stylesheet" type="text/css" >
+
+<script>
+function myFunction() {
+    alert("Product added to Cart.");
+}
+</script>
+
 </head>
 
 <body>
@@ -119,7 +126,7 @@
 
 	     </div>
 		 <div class="col-xs-3">
-		 <button type="submit" class="btn btn-success" style="background:#2d3738;" > Add to Cart</button>
+		 <button type="submit" class="btn btn-success" style="background:#2d3738;" onclick="myFunction()"> Add to Cart</button>
 	     </div>
 		 </div>
 	 </form>
@@ -138,7 +145,7 @@
    </tr>
  </thead>
  <tbody>
-  
+
   <!-- <tr>
     <td>Nutrient 1</td>
 	<td>{{nutrient_1}}</td>
@@ -160,7 +167,7 @@
 	<td>{{nutrient_5}}</td>
   </tr> -->
   {{nut|safe}}
- 
+
   <!-- <tr>
     <td>Nutrient 1</td>
   <td>{{nutrient_1}}</td>
