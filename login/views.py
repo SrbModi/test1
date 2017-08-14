@@ -41,7 +41,7 @@ def sign_in(request):
 					return HttpResponseRedirect('/')
 			else:
 				print("username and password mismatch")
-				return render(request,"login.html",{"message":"Username and Password do not match ! Please Try Again."})
+				return render(request,"login.html",{"message":"Username and Password do not match !"})
 	# except:
 		# 	print("server side error!!!!!")
 		# 	return render(request,"login.html",{"message":"server side issue"})
